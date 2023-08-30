@@ -92,26 +92,26 @@ section{
   float: right;
 }
 .skills-primary > .skill:first-child span::after{
-  content: "******";
+  content: "\2605 \2605 \2605 \2605 \2605";
   
 }
 .skills-primary > .skill:nth-child(2) span::after{
-  content: "******";
+  content: "\2605\2605\2605\2605 ";
 }
 .skills-primary > .skill:nth-child(3) span::after{
-  content: "****";
+  content: "\2605\2605\2605";
 
 }
 .skills-secondary > .skill:nth-child(1) span::after{
-  content: "****";
+  content: "\2605\2605\2605";
   
 }
 .skills-secondary > .skill:nth-child(2) span::after{
-  content: "****";
+  content: "\2605\2605\2605\2605";
   
 }
 .skills-secondary > .skill:nth-child(3) span::after{
-  content: "****";
+  content: "\2605\2605\2605\2605";
   
 }
 .skills-secondary > .skill:nth-child(4) span::after{
@@ -192,20 +192,44 @@ color: transparent;
   display: flex;
   justify-content: space-around;
   border: none;
+  margin-top: 2rem;
 }
 .contact-skype{
   display: none;
 }
-
+.contact-type, .contact-value > a{
+  display: none;
+}
+.contact-value{
+  width: 120px;
+  height: 120px;
+  background-size: 120px;
+}
+.contact-facebook > .contact-value{
+  background-image: url(../images/facebook.png);
+}
+.contact-email > .contact-value{
+  background-image: url(../images/email.png);
+}
+.contact-phone > .contact-value{
+  background-image: url(../images/phone.png);
+}
+.contact-github > .contact-value{
+  background-image: url(../images/github.png);
+}
 
 
 @media screen and (max-width:800px) {
   figure{
     display: none;
   }
-  
-  #wrapper{
-    /* margin-left: 2rem; */
+  #contact{
+    margin-left: 0;
+  }
+  .contact-value{
+    width: 80px;
+    height: 80px;
+    background-size: 80px;
   }
   #contact > h3{
     display: none;
